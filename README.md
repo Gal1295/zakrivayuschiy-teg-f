@@ -1,1 +1,1 @@
-https://gal1295.github.io/zakrivayuschiy-teg-f/
+https://github.com/Gal1295/zakrivayuschiy-teg-f.git
