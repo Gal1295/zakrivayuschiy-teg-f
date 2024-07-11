@@ -1,6 +1,6 @@
 /* Здесь вы напишете основную часть стилей страницы.
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HtML некоторые классы были названы особым образом:
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
 ✦ like-icon — для svg-иконки анимированного сердца
@@ -9,7 +9,7 @@
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+Кроме этого, не меняйте HtML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
 
@@ -18,7 +18,7 @@
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
   font-variation-settings: "wght" var(--font-text-wght, 400);
-  color: var(--Themes-mainColor, #000);
+  color: var(--themes-mainColor, #000);
   background-color: var(--bg-color, #fff);
   background-image: var(
     --bg-img,
@@ -30,10 +30,11 @@
   background-attachment: fixed;
   background-size: cover;
 }
+
 .section__width {
   border: 2px solid;
   inline-size: clamp(371px, 60vw, 700px);
-  background-color: var(--Themes-background, #fff);
+  background-color: var(--themes-background, #fff);
 }
 
 .header {
@@ -66,7 +67,7 @@
   flex-direction: column;
   font-size: 14px;
   line-height: 1em;
-  gap: 8px;
+  gap: 10px;
 }
 
 .theme-menu {
@@ -78,11 +79,17 @@
   text-transform: inherit;
   border: none;
   background-color: transparent;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus,
+.theme-menu__button:hover,
 .theme-menu__button:disabled {
   opacity: 60%;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
 }
 
 .theme-menu__button:disabled {
@@ -94,6 +101,15 @@
   position: absolute;
   inset-inline-start: -18px;
   inset-block-start: 2px;
+}
+
+.theme-menu__button::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: -1px;
+  background-color: var(--themes-mainColor, #000);
 }
 
 .section {
@@ -174,14 +190,14 @@
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
   text-transform: uppercase;
-  text-shadow: -1px 0 var(--Themes-background, #fff),
-    0 1px var(--Themes-background, #fff), 1px 0 var(--Themes-background, #fff),
-    0 -1px var(--Themes-background, #fff);
+  text-shadow: -1px 0 var(--themes-background, #fff),
+    0 1px var(--themes-background, #fff), 1px 0 var(--themes-background, #fff),
+    0 -1px var(--themes-background, #fff);
 }
 
-@supports (-webkit-text-stroke: 1px var(--Themes-background, #fff)) {
+@supports (-webkit-text-stroke: 1px var(--themes-background, #fff)) {
   .section-lable__text {
-    -webkit-text-stroke: 1px var(--Themes-background, #fff);
+    -webkit-text-stroke: 1px var(--themes-background, #fff);
     text-shadow: none;
   }
 }
@@ -189,14 +205,14 @@
 .section__arcticle-title {
   font-size: 18px;
   font-variation-settings: "wght" var(--font-title-wght, 700);
-  border-block-end: 2px solid var(--Themes-mainColor, #000);
+  border-block-end: 2px solid var(--themes-mainColor, #000);
   padding: 4px 10px;
 }
 
 .section__arcticle-text {
   display: flex;
   flex-direction: column;
-  border-block-start: 2px solid var(--Themes-mainColor, #000);
+  border-block-start: 2px solid var(--themes-mainColor, #000);
   gap: 27px;
   padding: 25px;
 }
@@ -206,8 +222,8 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--Themes-mainColor, #000);
-  box-shadow: 0px 0px 0px var(--Themes-mainColor, #000);
+  border: 2px solid var(--themes-mainColor, #000);
+  box-shadow: 0px 0px 0px var(--themes-mainColor, #000);
 }
 
 .card__button {
@@ -221,7 +237,7 @@
   display: flex;
   align-items: center;
   background-color: transparent;
-  border: 2px solid var(--Themes-background, #fff);
+  border: 2px solid var(--themes-background, #fff);
   inline-size: 38px;
   block-size: 35px;
   outline: 2px solid transparent;
@@ -229,34 +245,11 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--Themes-mainColor, #000);
+  outline: 2px solid var(--themes-mainColor, #000);
 }
 
 .like-icon {
   inline-size: 100%;
-}
-
-.like-icon__core,
-.like-icon__main-body {
-  fill: transparent;
-}
-
-.like-icon:hover .like-icon__core,
-.like-icon:hover .like-icon__main-body,
-.dialog-floppy {
-  fill: var(--Themes-mainColor, #000);
-}
-
-.like-icon:active .like-icon__core,
-.like-icon:active .like-icon__main-body,
-.like-icon.is-liked .like-icon__core,
-.like-icon.is-liked .like-icon__main-body,
-.like-icon.is-liked .like-icon__contour {
-  fill: var(--like-icon__mainColor, #ff0000);
-}
-
-.like-icon__sparks {
-  opacity: 0;
 }
 
 .card__like-button {
@@ -278,14 +271,29 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0px var(--Themes-mainColor, #000);
+  box-shadow: 2px 2px 0px var(--themes-mainColor, #000);
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0%;
+  height: 100%;
+  inset-inline-start: 0px;
+  inset-block-start: 0px;
+  background-color: var(--themes-mainColor, #000);
+}
+
+.button:hover::before {
+  width: 100%;
 }
 
 .button__text {
   position: relative;
   font-size: 14px;
   line-height: 90%;
-  color: var(--Themes-accentColor, #fff);
+  color: var(--themes-accentColor, #fff);
   font-family: var(--accent-font, sans-serif);
   mix-blend-mode: difference;
   z-index: 1;
@@ -297,7 +305,7 @@
 }
 
 .save-button {
-  background-color: var(--Themes-background, #fff);
+  background-color: var(--themes-background, #fff);
   margin: auto;
   padding: 15px 21px;
   gap: 8px;
@@ -305,7 +313,7 @@
 
 .floppy {
   position: relative;
-  fill: var(--Themes-accentColor, #fff);
+  fill: var(--themes-accentColor, #fff);
   mix-blend-mode: difference;
   z-index: 1;
 }
@@ -318,8 +326,8 @@
 .dialog-section {
   inline-size: clamp(341px, 24vw, 357px);
   font-size: 14px;
-  background-color: var(--Themes-background, #fff);
-  border: 2px solid var(--Themes-mainColor, #000);
+  background-color: var(--themes-background, #fff);
+  border: 2px solid var(--themes-mainColor, #000);
   padding: 30px;
 }
 
@@ -331,8 +339,8 @@
 
 .form__section {
   display: flex;
-  background-color: var(--Themes-background, #fff);
-  color: var(--Themes-mainColor, #000);
+  background-color: var(--themes-background, #fff);
+  color: var(--themes-mainColor, #000);
   justify-content: flex-start;
   align-items: center;
   gap: 20px;

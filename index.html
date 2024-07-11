@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UtF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
     <title>Закрывающий тег</title>
@@ -47,7 +47,7 @@
       </nav>
     </header>
     <main>
-      <div class="section">
+      <section class="section">
         <article class="section__arcticle section__width">
           <h2 class="section__arcticle-title">
             Фритрек и нулевой спринт: Подготовка к работе
@@ -77,9 +77,14 @@
               что-то новое и необычное.
             </p>
             <div class="card__button">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+                aria-labelledby="like-button-01"
+              >
                 <svg
                   class="like-icon"
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 39 39"
                   fill="none"
@@ -87,7 +92,7 @@
                   <g class="like-icon__heart">
                     <path
                       class="like-icon__contour"
-                      fill="var(--Themes-mainColor)"
+                      fill="var(--themes-mainColor)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -108,13 +113,16 @@
                   />
                 </svg>
               </button>
-              <button class="button card__like-button" type="button">
+              <button
+                id="like-button-01"
+                class="button card__like-button"
+                type="button"
+              >
                 <span class="button__text"> Like </span>
               </button>
             </div>
           </div>
         </article>
-
         <article class="section__arcticle section__width">
           <h2 class="section__arcticle-title">1 спринт: Я — чистый лист</h2>
           <figure class="section-picture">
@@ -144,9 +152,14 @@
               этапе.
             </p>
             <div class="card__button">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+                aria-labelledby="like-button-02"
+              >
                 <svg
                   class="like-icon"
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="39"
                   height="36"
@@ -156,7 +169,7 @@
                   <g class="like-icon__heart">
                     <path
                       class="like-icon__contour"
-                      fill="var(--Themes-mainColor)"
+                      fill="var(--themes-mainColor)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -177,7 +190,11 @@
                   />
                 </svg>
               </button>
-              <button class="button card__like-button" type="button">
+              <button
+                id="like-button-02"
+                class="button card__like-button"
+                type="button"
+              >
                 <span class="button__text"> Like </span>
               </button>
             </div>
@@ -214,9 +231,14 @@
               подобное.
             </p>
             <div class="card__button">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+                aria-labelledby="like-button-03"
+              >
                 <svg
                   class="like-icon"
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="39"
                   height="36"
@@ -226,7 +248,7 @@
                   <g class="like-icon__heart">
                     <path
                       class="like-icon__contour"
-                      fill="var(--Themes-mainColor)"
+                      fill="var(--themes-mainColor)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -247,7 +269,11 @@
                   />
                 </svg>
               </button>
-              <button class="button card__like-button" type="button">
+              <button
+                id="like-button-03"
+                class="button card__like-button"
+                type="button"
+              >
                 <span class="button__text"> Like </span>
               </button>
             </div>
@@ -282,9 +308,14 @@
               необъятно...
             </p>
             <div class="card__button">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+                aria-labelledby="like-button-04"
+              >
                 <svg
                   class="like-icon"
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="39"
                   height="36"
@@ -294,7 +325,7 @@
                   <g class="like-icon__heart">
                     <path
                       class="like-icon__contour"
-                      fill="var(--Themes-mainColor)"
+                      fill="var(--themes-mainColor)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -315,7 +346,11 @@
                   />
                 </svg>
               </button>
-              <button class="button card__like-button" type="button">
+              <button
+                id="like-button-04"
+                class="button card__like-button"
+                type="button"
+              >
                 <span class="button__text"> Like </span>
               </button>
             </div>
@@ -352,9 +387,14 @@
               сложнее...
             </p>
             <div class="card__button">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+                aria-labelledby="like-button-05"
+              >
                 <svg
                   class="like-icon"
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="39"
                   height="36"
@@ -364,7 +404,7 @@
                   <g class="like-icon__heart">
                     <path
                       class="like-icon__contour"
-                      fill="var(--Themes-mainColor)"
+                      fill="var(--themes-mainColor)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -385,7 +425,11 @@
                   />
                 </svg>
               </button>
-              <button class="button card__like-button" type="button">
+              <button
+                id="like-button-05"
+                class="button card__like-button"
+                type="button"
+              >
                 <span class="button__text"> Like </span>
               </button>
             </div>
@@ -418,9 +462,14 @@
               реализации!
             </p>
             <div class="card__button">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+                aria-labelledby="like-button-06"
+              >
                 <svg
                   class="like-icon"
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="39"
                   height="36"
@@ -430,7 +479,7 @@
                   <g class="like-icon__heart">
                     <path
                       class="like-icon__contour"
-                      fill="var(--Themes-mainColor)"
+                      fill="var(--themes-mainColor)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -451,7 +500,11 @@
                   />
                 </svg>
               </button>
-              <button class="button card__like-button" type="button">
+              <button
+                id="like-button-06"
+                class="button card__like-button"
+                type="button"
+              >
                 <span class="button__text"> Like </span>
               </button>
             </div>
@@ -487,9 +540,14 @@
               Этапы, последовательность, время - главные помощники.
             </p>
             <div class="card__button">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+                aria-labelledby="like-button-07"
+              >
                 <svg
                   class="like-icon"
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="39"
                   height="36"
@@ -499,7 +557,7 @@
                   <g class="like-icon__heart">
                     <path
                       class="like-icon__contour"
-                      fill="var(--Themes-mainColor)"
+                      fill="var(--themes-mainColor)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -520,7 +578,11 @@
                   />
                 </svg>
               </button>
-              <button class="button card__like-button" type="button">
+              <button
+                id="like-button-07"
+                class="button card__like-button"
+                type="button"
+              >
                 <span class="button__text"> Like </span>
               </button>
             </div>
@@ -557,9 +619,14 @@
               по намеченному пути к заветной цели...
             </p>
             <div class="card__button">
-              <button class="card__icon-button" type="button">
+              <button
+                class="card__icon-button"
+                type="button"
+                aria-labelledby="like-button-08"
+              >
                 <svg
                   class="like-icon"
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="39"
                   height="36"
@@ -569,7 +636,7 @@
                   <g class="like-icon__heart">
                     <path
                       class="like-icon__contour"
-                      fill="var(--Themes-mainColor)"
+                      fill="var(--themes-mainColor)"
                       d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z"
                     />
                     <path
@@ -590,55 +657,61 @@
                   />
                 </svg>
               </button>
-              <button class="button card__like-button" type="button">
+              <button
+                id="like-button-08"
+                class="button card__like-button"
+                type="button"
+              >
                 <span class="button__text"> Like </span>
               </button>
             </div>
           </div>
         </article>
-      </div>
-    </main>
-    <footer class="footer">
-      <button
-        class="button save-button"
-        type="submit"
-        onclick="window['dialog-id'].showModal()"
-        aria-controls="dialog-id"
-      >
-        <svg
-          class="floppy"
-          xmlns="http://www.w3.org/2000/svg"
-          width="21"
-          height="21"
-          viewBox="0 0 21 21"
+      </section>
+      <section class="footer">
+        <button
+          class="button save-button"
+          type="submit"
+          onclick="window['dialog-id'].showModal()"
+          aria-controls="dialog-id"
         >
-          <use href="./images/floppy.svg#floppy-1"></use>
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-      <dialog id="dialog-id" class="dialog-section">
-        <form class="dialog-form__section" method="dialog">
-          <div class="form__section">
-            <svg
-              class="dialog-floppy"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 21 21"
-            >
-              <use href="./images/floppy.svg#floppy-1"></use>
-            </svg>
-            <p class="form__section-text">Вставьте дискету, чтобы продолжить</p>
-          </div>
-          <button
-            class="button dialog-button"
-            aria-label="Закрыть модально окно"
-            type="submit"
-            onclick="window['dialog-id'].close()"
+          <svg
+            class="floppy"
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
           >
-            <span class="button__text"> ok </span>
-          </button>
-        </form>
-      </dialog>
-    </footer>
+            <use href="./svg/floppy.svg#floppy-save"></use>
+          </svg>
+          <span class="button__text">Сохранить на память</span>
+        </button>
+        <dialog id="dialog-id" class="dialog-section">
+          <form class="dialog-form__section" method="dialog">
+            <div class="form__section">
+              <svg
+                class="dialog-floppy"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 21 21"
+              >
+                <use href="./svg/floppy.svg#floppy-save"></use>
+              </svg>
+              <p class="form__section-text">
+                Вставьте дискету, чтобы продолжить
+              </p>
+            </div>
+            <button
+              class="button dialog-button"
+              aria-label="Закрыть модально окно"
+              type="submit"
+              onclick="window['dialog-id'].close()"
+            >
+              <span class="button__text"> ok </span>
+            </button>
+          </form>
+        </dialog>
+      </section>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

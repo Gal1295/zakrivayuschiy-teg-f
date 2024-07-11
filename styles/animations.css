@@ -1,6 +1,6 @@
 /* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HtML некоторые классы были названы особым образом:
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
 ✦ like-icon — для svg-иконки анимированного сердца
@@ -10,133 +10,126 @@
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+Кроме этого, не меняйте HtML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
-.theme-menu__button {
-    transition: opacity 0.3s ease;
+
+.theme-menu__button::after {
+  transition: width 0.3s linear;
+}
+
+.button {
+  transition: box-shadow 0.3s;
+}
+
+.theme-menu__button:disabled::after {
+  animation: arrow-moving infinite alternate ease-in-out 0.5s;
+}
+
+@keyframes arrow-moving {
+  0% {
+    transform: translate(0);
   }
-  
-  .theme-menu__button:hover {
-    opacity: 60%;
+
+  100% {
+    transform: translate(4px);
   }
-  
-  .theme-menu__button::after {
-    content: "";
-    display: block;
-    width: 0%;
-    height: 2px;
-    margin-top: -1px;
-    background-color: var(--Themes-mainColor, #000);
-    transition: width 0.5s;
+}
+
+.card__icon-button {
+  transition: outline 0.3s ease;
+}
+
+.like-icon__core {
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon__main-body {
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .like-icon__core {
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .like-icon__main-body {
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon:active .like-icon__core {
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .like-icon__main-body {
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon__contour {
+  transition: fill 0.1s linear;
+}
+
+.like-icon.is-liked .like-icon__core {
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .like-icon__main-body {
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .like-icon__contour {
+  transition: fill 0.3s 0.06s linear;
+}
+
+.like-icon.is-liked .like-icon__heart {
+  transform-origin: center;
+  animation: heart-scale 0.3s 0.1s ease-in 1 alternate;
+}
+
+.like-icon__core,
+.like-icon__main-body {
+  fill: transparent;
+}
+
+.like-icon:hover .like-icon__core,
+.like-icon:hover .like-icon__main-body,
+.dialog-floppy {
+  fill: var(--themes-mainColor, #000);
+}
+
+.like-icon:active .like-icon__core,
+.like-icon:active .like-icon__main-body,
+.like-icon.is-liked .like-icon__core,
+.like-icon.is-liked .like-icon__main-body,
+.like-icon.is-liked .like-icon__contour {
+  fill: var(--like-icon__mainColor, #ff0000);
+}
+
+.like-icon__sparks {
+  opacity: 0;
+}
+@keyframes heart-scale {
+  from {
+    scale: 1;
   }
-  
-  .theme-menu__button:focus-visible::after {
-    width: 100%;
+
+  to {
+    scale: 1.5;
   }
-  
-  .button {
-    transition: box-shadow 0.3s;
+}
+
+.like-icon.is-liked .like-icon__sparks {
+  animation: sparks-opacity 0.3s 0.3s ease-in 1 alternate;
+}
+
+@keyframes sparks-opacity {
+  from {
+    opacity: 0;
   }
-  
-  .theme-menu__button:disabled::after {
-    animation: arrow-moving infinite alternate ease-in-out 0.5s;
+
+  to {
+    opacity: 1;
   }
-  
-  @keyframes arrow-moving {
-    0% {
-      transform: translate(0);
-    }
-  
-    100% {
-      transform: translate(4px);
-    }
-  }
-  
-  .card__icon-button {
-    transition: outline 0.3s ease;
-  }
-  
-  .like-icon__core {
-    transition: fill 0.3s 0.03s;
-  }
-  
-  .like-icon__main-body {
-    transition: fill 0.3s;
-  }
-  
-  .like-icon:hover .like-icon__core {
-    transition: fill 0.3s;
-  }
-  
-  .like-icon:hover .like-icon__main-body {
-    transition: fill 0.3s 0.05s;
-  }
-  
-  .like-icon:active .like-icon__core {
-    transition: fill 0.3s;
-  }
-  
-  .like-icon:active .like-icon__main-body {
-    transition: fill 0.3s 0.05s;
-  }
-  
-  .like-icon__contour {
-    transition: fill 0.1s;
-  }
-  
-  .like-icon.is-liked .like-icon__core {
-    transition: fill 0.3s;
-  }
-  
-  .like-icon.is-liked .like-icon__main-body {
-    transition: fill 0.3s 0.05s;
-  }
-  
-  .like-icon.is-liked .like-icon__contour {
-    transition: fill 0.3s 0.06s;
-  }
-  
-  .like-icon.is-liked .like-icon__heart {
-    transform-origin: center;
-    animation: heart-scale 0.3s 2 alternate ease-in 0.1s;
-  }
-  
-  @keyframes heart-scale {
-    from {
-      scale: 1;
-    }
-  
-    to {
-      scale: 1.5;
-    }
-  }
-  
-  .like-icon.is-liked .like-icon__sparks {
-    animation: sparks-opacity 0.3s 2 alternate ease-in 0.3s;
-  }
-  
-  @keyframes sparks-opacity {
-    from {
-      opacity: 0;
-    }
-  
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .button::before {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 0%;
-    height: 100%;
-    inset-inline-start: 0px;
-    inset-block-start: 0px;
-    background-color: var(--Themes-mainColor, #000);
-    transition: width 0.5s ease-in-out;
-  }
-  
-  .button:hover::before {
-    width: 100%;
-  }
+}
+
+.button::before {
+  transition: width 0.5s ease-in-out;
+}
